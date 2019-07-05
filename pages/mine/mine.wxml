@@ -1,0 +1,12 @@
+<view class='history-text'> 历史记录 </view>
+
+<block wx:if="{{historyList.length!=0}}">
+  <view class='history'>
+    <navigator hover-class='none' url="/pages/detail/detail?key={{item}}" class='item' wx:for="{{historyList}}" wx:key="index">
+      {{item}}
+    </navigator>
+  </view>
+</block>
+<block wx:else>
+  <view class='nohistory'>暂无历史记录,去查一下吧!</view>
+</block>

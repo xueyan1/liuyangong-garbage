@@ -1,0 +1,34 @@
+page {
+  background: white;
+}
+
+.history-text {
+  margin-left: 40rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+
+.history {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}
+
+.item {
+  border: 1rpx solid #999;
+  padding: 6rpx 12rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  color: rgb(100, 64, 50);
+}
+
+.nohistory {
+  height: 500rpx;
+  width: 90%;
+  line-height: 500rpx;
+  text-align: center;
+  color: #666;
+}

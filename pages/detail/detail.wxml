@@ -1,0 +1,15 @@
+<!-- 搜索的结果 -->
+<block wx:if="{{result.length!=0}}">
+  <view class='result'>
+    <view  wx:for="{{result}}" wx:key="index">
+      <text class='name'>{{item.name}}:</text>
+      <text class='type'>{{item.type}}</text>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view  class='noresult'>
+    <view> 哎呀，没有找到这个垃圾分类呢！</view>
+    <image src='./image/lajitong.png'></image>
+  </view>
+</block>

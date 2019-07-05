@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/classify/classify",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/index/index"
+  ],
+  "tabBar": {
+    "selectedColor":"#1afa29",
+    "list": [
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath":"image/classify.png",
+        "selectedIconPath":"image/classify-s.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+          "iconPath": "image/mine.png",
+          "selectedIconPath": "image/mine-s.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "垃圾分类",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

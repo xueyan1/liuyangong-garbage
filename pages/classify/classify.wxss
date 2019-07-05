@@ -1,0 +1,106 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30rpx;
+}
+
+.search input {
+  padding-left: 10rpx;
+}
+
+.search text {
+  box-sizing: border-box;
+  width: 150rpx;
+  text-align: center;
+  border: 1rpx solid #eee;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+}
+
+.swiper {
+  height: 1000rpx;
+  width: 100%;
+  border-top: 1rpx solid rgb(221, 221, 221);
+}
+
+.swiper .item {
+  display: flex;
+  margin-top: 40rpx;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30rpx;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.swiper .item image {
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.swiper .item .title {
+  padding: 0 40rpx;
+  font-size: 30rpx;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.swiper .item .include {
+  border-radius: 10rpx;
+  padding: 0 40rpx;
+  width: 600rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: white;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.swiper .item .demand {
+  width: 90%;
+}
+
+.mt_40 {
+  margin-top: 40rpx;
+}
+
+.mt_20 {
+  margin-top: 20rpx;
+}
+
+.result {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgba(1, 1, 1, 0.4);
+}
+
+.noresult {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 42rpx;
+  z-index: 100;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgba(1, 1, 1, 0.4);
+}
+
+.noresult image {
+  height: 300rpx;
+  width: 300rpx;
+  margin-top: 30rpx;
+}
