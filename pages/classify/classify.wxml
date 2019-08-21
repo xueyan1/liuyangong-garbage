@@ -1,6 +1,6 @@
 <view class='search'>
-  <input class='' bindblur='bindInput' placeholder='请输入垃圾名称'></input>
-  <text wx:if="{{isChinese}}" bindtap='search'>搜索</text>
+  <input bindconfirm='bindconfirm' bindblur='bindInput' placeholder='请输入垃圾名称'></input>
+  <text  wx:if="{{isChinese}}" bindtap='search'>搜索</text>
   <text wx:else>搜索</text>
 </view>
 

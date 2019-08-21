@@ -32,3 +32,11 @@ page {
   text-align: center;
   color: #666;
 }
+.concatBtn{
+    color: white;
+    font-size: 32rpx;
+    position: fixed;
+    bottom: 60rpx;
+    right:30rpx;
+    background-color: green
+  }

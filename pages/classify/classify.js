@@ -48,8 +48,24 @@ Page({
     isChinese: false
   },
   onLoad(options) {},
+  onShareAppMessage(){},
   bindInput(e) {
-    let key = e.detail.value
+    this.getChinese(e.detail.value)
+  },
+  search() {
+    wx.navigateTo({
+      url: '/pages/detail/detail?key=' + this.data.key,
+    })
+  },
+  bindconfirm(e){
+    this.getChinese(e.detail.value)
+    if(this.data.isChinese){
+      wx.navigateTo({
+        url: '/pages/detail/detail?key=' + this.data.key,
+      })
+    }
+  },
+  getChinese(key){
     var reg = /[\u4E00-\u9FA5\uF900-\uFA2D]/;
     let isChinese = reg.test(key)
     if (isChinese) {
@@ -63,10 +79,5 @@ Page({
         showCancel: false
       })
     }
-  },
-  search() {
-    wx.navigateTo({
-      url: '/pages/detail/detail?key=' + this.data.key,
-    })
   }
 })

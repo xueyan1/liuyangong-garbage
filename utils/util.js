@@ -14,6 +14,12 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const isChinese = data => {
+  var reg = /[\u4E00-\u9FA5\uF900-\uFA2D]/;
+  return reg.test(data)
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime,
+  isChinese
 }

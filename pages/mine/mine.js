@@ -5,8 +5,12 @@ Page({
 
   onLoad(options) {
     let history = wx.getStorageSync("history")
-    this.setData({
-      historyList: history
-    })
-  }
+    if (history ) {
+      history =  Array.from(new Set(history))
+      this.setData({
+        historyList: history.slice(0,12)
+      })
+    }
+  },
+  onShareAppMessage(){}
 })

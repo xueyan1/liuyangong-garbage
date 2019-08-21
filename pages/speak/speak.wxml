@@ -1,0 +1,4 @@
+<view>
+  <button bindtap=''>录音</button>
+
+</view>

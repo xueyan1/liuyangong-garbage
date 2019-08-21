@@ -1,0 +1,11 @@
+
+<view class="content">
+<view class="title">
+  这是什么垃圾
+</view>
+<view bindtap="chooseImg" class="content">
+<view class="imgview"> <image class="chooseimg" src="/image/chooseimg.png"></image></view>
+  <text class="imgview_text">拍照识别</text>
+</view>
+</view>
+

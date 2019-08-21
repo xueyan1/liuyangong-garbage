@@ -1,9 +1,14 @@
-<!-- 搜索的结果 -->
+<!-- 搜索的结果 
+垃圾类型：1-可回收垃圾，2-有害垃圾，4-湿垃圾，8-干垃圾，16-大件垃圾-->
 <block wx:if="{{result.length!=0}}">
   <view class='result'>
     <view  wx:for="{{result}}" wx:key="index">
       <text class='name'>{{item.name}}:</text>
-      <text class='type'>{{item.type}}</text>
+      <text wx:if="{{item.type === 1}}" class='type'>可回收垃圾</text>
+      <text wx:if="{{item.type === 2}}"class='type'>有害垃圾</text>
+      <text wx:if="{{item.type === 4}}"class='type'>湿垃圾</text>
+      <text wx:if="{{item.type === 8}}"class='type'>干垃圾</text>
+      <text wx:if="{{item.type === 16}}"class='type'>大件垃圾</text>
     </view>
   </view>
 </block>

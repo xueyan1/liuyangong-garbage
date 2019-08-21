@@ -10,3 +10,6 @@
 <block wx:else>
   <view class='nohistory'>暂无历史记录,去查一下吧!</view>
 </block>
+
+
+<button class="concatBtn"  open-type="contact" >联系我</button>

@@ -1,24 +1,32 @@
 {
   "pages": [
     "pages/classify/classify",
-    "pages/mine/mine",
+    "pages/index/index",
     "pages/detail/detail",
-    "pages/index/index"
+    "pages/photo/photo",
+    "pages/speak/speak",
+    "pages/mine/mine"
   ],
   "tabBar": {
-    "selectedColor":"#1afa29",
+    "selectedColor": "#1afa29",
     "list": [
       {
         "pagePath": "pages/classify/classify",
         "text": "分类",
-        "iconPath":"image/classify.png",
-        "selectedIconPath":"image/classify-s.png"
+        "iconPath": "image/classify.png",
+        "selectedIconPath": "image/classify-s.png"
+      },
+      {
+        "pagePath": "pages/photo/photo",
+        "text": "拍照",
+        "iconPath": "image/img.png",
+        "selectedIconPath": "image/img-s.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-          "iconPath": "image/mine.png",
-          "selectedIconPath": "image/mine-s.png"
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine-s.png"
       }
     ]
   },

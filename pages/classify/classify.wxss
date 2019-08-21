@@ -1,22 +1,3 @@
-.search {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30rpx;
-}
-
-.search input {
-  padding-left: 10rpx;
-}
-
-.search text {
-  box-sizing: border-box;
-  width: 150rpx;
-  text-align: center;
-  border: 1rpx solid #eee;
-  padding: 5rpx 10rpx;
-  border-radius: 10rpx;
-}
 
 .swiper {
   height: 1000rpx;
@@ -103,4 +84,16 @@
   height: 300rpx;
   width: 300rpx;
   margin-top: 30rpx;
+}
+.search{
+  display: flex;
+  margin: 20rpx 40rpx
+}
+.search input{
+  flex: 5;
+  font-size: 32rpx
+}
+.search text{
+  font-size: 32rpx;
+  color: #666
 }

@@ -1,0 +1,32 @@
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.imgview {
+  height: 160rpx;
+  width:  160rpx;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx
+}
+.imgview_text{
+  font-size: 32rpx;
+  color: #999
+}
+.chooseimg {
+  height: 80rpx;
+  width: 80rpx
+}
+.title{
+  height:720rpx;
+  width:450rpx;
+  font-size: 46rpx;
+  color: #999;
+  line-height: 720rpx;
+  text-align: center
+}
