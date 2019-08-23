@@ -1,5 +1,4 @@
-
-<clearInput  />
+<clearInput />
 <view class="content">
   <view class="title">
     {{currentText?currentText:'这是什么垃圾'}}

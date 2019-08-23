@@ -1,14 +1,18 @@
 var plugin = requirePlugin("WechatSI")
 let manager = plugin.getRecordRecognitionManager()
-import { getRefuseData} from '../../utils/request.js'
-import { queryGarbagUrl } from '../../utils/urls.js'
+import {
+  getRefuseData
+} from '../../utils/request.js'
+import {
+  queryGarbagUrl
+} from '../../utils/urls.js'
 Page({
 
   data: {
     currentText: '', // 语音输入的内容
-    translateText:'',// 翻译的内容
-    typeName:'',
-    isRecording:false // 是否在录音
+    translateText: '', // 翻译的内容
+    typeName: '',
+    isRecording: false // 是否在录音
   },
 
   onLoad(options) {
@@ -39,7 +43,7 @@ Page({
       lang: 'zh_CN',
     })
     this.setData({
-      isRecording:true
+      isRecording: true
     })
 
   },
@@ -54,9 +58,11 @@ Page({
     this.textToSpeech()
     this.translate()
   },
-  getData(key){
+  getData(key) {
     var that = this
-    const { currentText} = this.data
+    const {
+      currentText
+    } = this.data
     let name = key.slice(0, -1)
     let history = wx.getStorageSync('history')
     if (!history) {
@@ -68,25 +74,27 @@ Page({
     wx.request({
       url: `${queryGarbagUrl}?name=${name}`,
       success(res) {
-        console.log("res",res)
+        console.log("res", res)
         if (!res.data && !res.data.data) return
-        const { type } = res.data.data
+        const {
+          type
+        } = res.data.data
         let typeName = ''
         wx.hideLoading()
-        switch (type){
+        switch (type) {
           case 1:
-            typeName =  "是可回收垃圾!"
+            typeName = "是可回收垃圾!"
             break
-          case 2 :
-            typeName =  "是有害垃圾!"
+          case 2:
+            typeName = "是有害垃圾!"
             break
-          case 4 :
-            typeName =  "是湿垃圾!"
+          case 4:
+            typeName = "是湿垃圾!"
             break
-          case 8 :
-            typeName =  "是干垃圾!"
+          case 8:
+            typeName = "是干垃圾!"
             break
-          case 16 :
+          case 16:
             typeName = "是大件垃圾!"
             break
         }
@@ -100,10 +108,9 @@ Page({
         })
       }
     })
-
   },
 
-  textToSpeech(){
+  textToSpeech() {
     plugin.textToSpeech({
       lang: "zh_CN",
       tts: true,
@@ -121,14 +128,14 @@ Page({
     })
   },
   //翻译
-  translate(){
+  translate() {
     let lfrom = 'zh_CN'
     let lto = 'en_US'
     plugin.translate({
       lfrom: lfrom,
       lto: lto,
       content: this.data.currentText,
-      tts: false, 
+      tts: false,
       success: (resTrans) => {
         let text = resTrans.result
         this.setData({

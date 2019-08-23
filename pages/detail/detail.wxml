@@ -1,19 +1,30 @@
 <!-- 搜索的结果 
 垃圾类型：1-可回收垃圾，2-有害垃圾，4-湿垃圾，8-干垃圾，16-大件垃圾-->
-<block wx:if="{{result.length!=0}}">
-  <view class='result'>
-    <view  wx:for="{{result}}" wx:key="index">
+<block wx:if="{{result.length!=0 && !isLoading}}">
+  <view class='result' wx:for="{{result}}" wx:key="index">
+    <view style="color:{{contentList[swiperCurrent].color}}">
       <text class='name'>{{item.name}}:</text>
-      <text wx:if="{{item.type === 1}}" class='type'>可回收垃圾</text>
-      <text wx:if="{{item.type === 2}}"class='type'>有害垃圾</text>
-      <text wx:if="{{item.type === 4}}"class='type'>湿垃圾</text>
-      <text wx:if="{{item.type === 8}}"class='type'>干垃圾</text>
-      <text wx:if="{{item.type === 16}}"class='type'>大件垃圾</text>
+      <text wx:if="{{item.type === 1}}"  >可回收垃圾</text>
+      <text wx:if="{{item.type === 2}}" >有害垃圾</text>
+      <text wx:if="{{item.type === 4}}" >湿垃圾</text>
+      <text wx:if="{{item.type === 8}}" >干垃圾</text>
+      <text wx:if="{{item.type === 16}}" >大件垃圾</text>
     </view>
   </view>
+
+  <swiper current="{{swiperCurrent}}" class='swiper'>
+    <block wx:key="index" wx:for="{{contentList}}">
+      <swiper-item  class="item">
+        <image mode='widthFix' src='{{item.image}}'></image>
+        <view class='title mt_40' style="color:{{item.color}}">{{item.title}}是指{{item.definition}}</view>
+        <view style="background-color:{{item.color}}" class='title include mt_20'>{{item.title}}主要包括</view>
+        <view class='title mt_20 demand' style="color:{{item.color}}" wx:for="{{item.demandList}}" wx:for-item="demandItem" wx:key="index">{{demandItem}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
 </block>
 <block wx:else>
-  <view  class='noresult'>
+  <view wx:if="{{!isLoading && result.length === 0}}" class='noresult'>
     <view> 哎呀，没有找到这个垃圾分类呢！</view>
     <image src='./image/lajitong.png'></image>
   </view>

@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/record/record",
-    "pages/classify/classify",
     "pages/index/index",
     "pages/detail/detail",
     "pages/photo/photo",
