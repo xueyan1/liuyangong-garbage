@@ -1,3 +1,10 @@
+
+.actionview{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%
+}
 .content{
   display: flex;
   flex-direction: column;
@@ -8,7 +15,7 @@
   height: 160rpx;
   width:  160rpx;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #f1f1f1;
   display: flex;
   justify-content: center;
   align-items: center;

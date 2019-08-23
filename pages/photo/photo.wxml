@@ -1,11 +1,20 @@
+<clearInput />
 <view class="content">
   <view class="title">
     喂，拍一下你的垃圾
   </view>
+  <view class="actionview">
   <view bindtap="chooseImg" class="content">
     <view class="imgview">
       <image class="chooseimg" src="/image/chooseimg.png"></image>
     </view>
     <text class="imgview_text">拍照识别</text>
+  </view>
+  <view bindtap="chooseAR" class="content">
+    <view class="imgview">
+      <image class="chooseimg" src="/image/ar.png"></image>
+    </view>
+    <text class="imgview_text">AR识别</text>
+  </view>
   </view>
 </view>

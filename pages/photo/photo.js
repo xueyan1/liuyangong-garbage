@@ -16,6 +16,12 @@ Page({
   onShareAppMessage() {
     
   },
+  chooseAR(){
+    wx.showToast({
+      icon:"none",
+      title: '努力开发中,敬请期待!',
+    })
+  },
   // 选择图片上传
   chooseImg() {
     wx.chooseImage({

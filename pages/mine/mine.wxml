@@ -14,7 +14,7 @@
   </view>
 </block>
 <block wx:else>
-  <view class='nohistory'>暂无历史记录,去查一下吧!</view>
+  <navigator hover-class="none" url="/pages/record/record" open-type="switchTab" class='nohistory'>暂无历史记录,去查一下吧!</navigator>
 </block>
 
 

@@ -3,9 +3,9 @@ Page({
     historyList: []
   },
 
-  onLoad(options) {
+  onShow() {
     let history = wx.getStorageSync("history")
-    if (history ) {
+    if (history) {
       history =  Array.from(new Set(history))
       this.setData({
         historyList: history.slice(0,12)

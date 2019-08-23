@@ -5,7 +5,7 @@ page {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #eee;
+  background-color: #f1f1f1;
   padding:20rpx 40rpx;
   box-sizing: border-box;
   font-size: 32rpx;
@@ -47,7 +47,7 @@ page {
 
 .nohistory {
   height: 500rpx;
-  width: 90%;
+  width: 100%;
   line-height: 500rpx;
   text-align: center;
   color: #666;
