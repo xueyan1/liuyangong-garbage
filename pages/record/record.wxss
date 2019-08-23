@@ -1,0 +1,50 @@
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.imgview {
+  height: 160rpx;
+  width:  160rpx;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx
+}
+.imgview_text{
+  font-size: 32rpx;
+  color: #999
+}
+.chooseimg {
+  height: 80rpx;
+  width: 80rpx
+}
+.title{
+  height:720rpx;
+  width:450rpx;
+  font-size: 46rpx;
+  color: #999;
+  line-height: 720rpx;
+  text-align: center
+}
+.translateText {
+  font-size: 20rpx;
+  color: #aaa;
+  position: fixed;
+  bottom: 240rpx;
+  right: 40rpx
+}
+.record-wave{
+  height: 60rpx;
+  padding: 20rpx 20rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 0 0 8rpx 8rpx
+}
+.record-wave image{
+  height: 60rpx;
+  margin: 0 40rpx;
+}

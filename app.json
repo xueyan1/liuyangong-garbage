@@ -1,18 +1,18 @@
 {
   "pages": [
+    "pages/record/record",
     "pages/classify/classify",
     "pages/index/index",
     "pages/detail/detail",
     "pages/photo/photo",
-    "pages/speak/speak",
     "pages/mine/mine"
   ],
   "tabBar": {
     "selectedColor": "#1afa29",
     "list": [
       {
-        "pagePath": "pages/classify/classify",
-        "text": "分类",
+        "pagePath": "pages/record/record",
+        "text": "语音",
         "iconPath": "image/classify.png",
         "selectedIconPath": "image/classify-s.png"
       },
@@ -33,8 +33,14 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "垃圾分类",
+    "navigationBarTitleText": "喂，你的垃圾",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.0",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
 }

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "clearInput": "../../components/search/search"
+  }
+}

@@ -1,0 +1,18 @@
+
+<clearInput  />
+<view class="content">
+  <view class="title">
+    {{currentText?currentText:'这是什么垃圾'}}
+    <text>{{typeName}}</text>
+    <view class="translateText" wx:if="{{translateText}}">英语: {{translateText}}</view>
+  </view>
+  <view catchtouchstart="streamRecord" catchtouchend="endStreamRecord" class="content">
+    <view class="imgview">
+      <image class="chooseimg" src="/image/yuyin.png"></image>
+    </view>
+    <text class="imgview_text">按住说话</text>
+    <view wx:if="{{isRecording}}" class="record-wave">
+      <image src="https://resource.aijiatui.com/ai-img/mini-program/wave.gif?t=1"></image>
+    </view>
+  </view>
+</view>

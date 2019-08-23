@@ -42,9 +42,9 @@ Page({
             const data = res.data
             console.log("data",data)
             if(data){
-              wx.setStorageSync("garlist", data)
+              wx.setStorageSync("garlist", data) // 因为返回来的可能是多数据的，所以保存起来，不过不作为历史查询
               wx.navigateTo({
-                url: '/pages/detail/detail',
+                url: `/pages/detail/detail`,
               })
             }
           }
