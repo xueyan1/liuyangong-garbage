@@ -1,10 +1,29 @@
 page {
   background: white;
 }
-
+.head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #eee;
+  padding:20rpx 40rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 40rpx
+}
+.nickname {
+  margin-left: 30rpx
+}
+.userinfo{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .history-text {
   margin-left: 40rpx;
-  font-size: 32rpx;
+  font-size: 36rpx;
   font-weight: 700;
   margin-bottom: 20rpx;
 }
@@ -17,12 +36,13 @@ page {
 }
 
 .item {
-  border: 1rpx solid #999;
+  font-size: 34rpx;
+  border: 1rpx solid #eee;
   padding: 6rpx 12rpx;
   margin-right: 20rpx;
   margin-top: 20rpx;
   border-radius: 10rpx;
-  color: rgb(100, 64, 50);
+  color:#666;
 }
 
 .nohistory {

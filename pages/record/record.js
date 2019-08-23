@@ -45,7 +45,6 @@ Page({
     this.setData({
       isRecording: true
     })
-
   },
   endStreamRecord() {
     manager.stop()
@@ -58,11 +57,22 @@ Page({
     this.textToSpeech()
     this.translate()
   },
-  getData(key) {
-    var that = this
+  // 点击跳转详情
+  navigateToDetail() {
     const {
       currentText
     } = this.data
+      let name = currentText.slice(0, -1)
+    console.log(name)
+    if(name){
+      wx.navigateTo({
+        url: `/pages/detail/detail?key=${name}`,
+      })
+    }
+  },
+  // 根据文字获取数据
+  getData(key) {
+    var that = this
     let name = key.slice(0, -1)
     let history = wx.getStorageSync('history')
     if (!history) {

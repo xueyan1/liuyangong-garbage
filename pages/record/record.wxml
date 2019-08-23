@@ -1,7 +1,7 @@
 <clearInput />
 <view class="content">
-  <view class="title">
-    {{currentText?currentText:'这是什么垃圾'}}
+  <view  bindtap="navigateToDetail" class="title">
+    {{currentText?currentText:'喂，说一下你的垃圾'}}
     <text>{{typeName}}</text>
     <view class="translateText" wx:if="{{translateText}}">英语: {{translateText}}</view>
   </view>

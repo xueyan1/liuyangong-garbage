@@ -30,9 +30,13 @@
   font-size: 42rpx;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.noresult image {
+  margin-top: 40rpx;
+  height: 150rpx;
+  width: 150rpx
+}
 .swiper {
-  height: 800rpx;
+  height: 900rpx;
   width: 100%;
   border-top: 1rpx solid rgb(221, 221, 221);
 }

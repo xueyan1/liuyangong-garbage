@@ -1,5 +1,11 @@
-<view class='history-text'> 历史记录 </view>
+<view class="head" >
+<view class="userinfo">
+<open-data class="useravata"  type="userAvatarUrl"></open-data>
+</view>
+<open-data class="nickname" default-text="小天使"  type="userNickName" ></open-data>
+</view>
 
+<view class='history-text'> 历史记录 </view>
 <block wx:if="{{historyList.length!=0}}">
   <view class='history'>
     <navigator hover-class='none' url="/pages/detail/detail?key={{item}}" class='item' wx:for="{{historyList}}" wx:key="index">

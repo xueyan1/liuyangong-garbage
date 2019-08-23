@@ -1,6 +1,6 @@
 <view class="content">
   <view class="title">
-    这是什么垃圾
+    喂，拍一下你的垃圾
   </view>
   <view bindtap="chooseImg" class="content">
     <view class="imgview">
