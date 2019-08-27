@@ -8,7 +8,7 @@
 <view class='history-text'> 历史记录 </view>
 <block wx:if="{{historyList.length!=0}}">
   <view class='history'>
-    <navigator hover-class='none' url="/pages/detail/detail?key={{item}}" class='item' wx:for="{{historyList}}" wx:key="index">
+    <navigator bindtap="navigatorTodetail" bindlongtap="deleteItem" hover-class='none' url="/pages/detail/detail?key={{item}}"  data-index="{{index}}" class='item' wx:for="{{historyList}}" wx:key="index">
       {{item}}
     </navigator>
   </view>

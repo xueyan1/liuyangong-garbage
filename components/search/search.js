@@ -1,3 +1,7 @@
+import Http from '../../utils/request.js'
+import {
+  queryGarbagUrl
+} from '../../utils/urls.js'
 Component({
   externalClasses: ['input-class', 'icon-class'],
 
@@ -32,7 +36,8 @@ Component({
    */
   data: {
     isClearShow: false,
-    inputValue: ''
+    inputValue: '',
+    resultList: []
   },
 
   /**
@@ -59,28 +64,56 @@ Component({
     },
 
     inputConfirm(e) {
-      var value = e.detail.value;
-      var detail = {
+      let value = e.detail.value;
+      let detail = {
         value: value
       }
       this.triggerEvent('inputConfirm', detail);
-      this.navigate(value)
+      this.isChinese(value, this.getResultList(value))
     },
 
     clearTap() {
       this.setData({
         isClearShow: false,
-        inputValue: ''
+        inputValue: '',
+        resultList: []
       });
     },
-    navigate(key){
+    getResultList(key){
+      let that = this
+      Http.get({
+        url: queryGarbagUrl,
+        params: {
+          name: key
+        }
+      }).then((res => {
+        console.log(res)
+        if (res.data) {
+          that.setData({
+            resultList: res.data
+          })
+        }
+      }))
+    },
+    // 跳转到详情
+    bindNavigate(e) {
+      const {
+        key
+      } = e.currentTarget.dataset
+      this.isChinese(key, this.navigateToDetail(key))
+    },
+    navigateToDetail(key){
+      this.clearTap()
+      wx.navigateTo({
+        url: `/pages/detail/detail?key=${key}`,
+      })
+    },
+    //判断是否是中文
+    isChinese(key, func) {
       var reg = /[\u4E00-\u9FA5\uF900-\uFA2D]/;
       let isChinese = reg.test(key)
       if (isChinese) {
-        this.clearTap()
-        wx.navigateTo({
-          url: `/pages/detail/detail?key=${key}`,
-        })
+        func
       } else {
         wx.showModal({
           content: '请输入中文',

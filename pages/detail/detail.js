@@ -1,4 +1,5 @@
 import { queryGarbagUrl} from '../../utils/urls.js'
+import Http from '../../utils/request.js'
 const contentList = [{
   title: "可回收物",
   image: './image/recyclable.png',
@@ -57,9 +58,10 @@ Page({
     }else {
       let result = wx.getStorageSync('garlist')
       if (JSON.parse(result).data) {
-        that.setSwiperCurrent(JSON.parse(result).data[0].type)
+        this.setSwiperCurrent(JSON.parse(result).data[0].type)
         this.setData({
-          result: JSON.parse(result).data
+          result: JSON.parse(result).data,
+          isLoading:false
         })
       }
     }
@@ -69,29 +71,31 @@ Page({
     wx.showLoading({
       title: '识别中',
     })
-    
-    wx.request({
-      url: `${queryGarbagUrl}?name=${key}`,
-      success(res) {
-        let list = []
-        let data={}
-        wx.hideLoading()
-        data = res.data.data
-        if(data) {
-          list.push(data)
-          that.setSwiperCurrent(data.type)
-        }
+    Http.get({
+      url: queryGarbagUrl,
+      params: {
+        name: decodeURIComponent(key) 
+      }
+    }).then((res => {
+      console.log(res)
+      if (res.data) {
+        that.setSwiperCurrent(res.data[0].type)
         that.setData({
-          result: list,
+          result: res.data,
           isLoading:false
         })
-      },
-      fail() {
+      }else {
         wx.showToast({
           title: '识别失败，请重试',
         })
       }
     })
+    )
+  },
+  //选择每一个item
+  chooseType(e){
+    const { type } = e.currentTarget.dataset
+    this.setSwiperCurrent(type)
   },
   // 设置滑块的位置
   setSwiperCurrent(type){

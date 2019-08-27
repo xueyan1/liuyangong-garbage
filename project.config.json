@@ -76,11 +76,18 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "pages/detail/detail",
 					"pathName": "pages/detail/detail",
-					"query": "",
+					"query": "key=基围虾",
 					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/record/record",
+					"pathName": "pages/record/record",
+					"query": "key=虾",
+					"scene": 1011
 				}
 			]
 		}

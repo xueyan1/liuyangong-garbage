@@ -1,16 +1,15 @@
 <view class='search'>
   <icon class='icon-class' size="12px" type="search"></icon>
-  <input 
-  class="input" 
-  placeholder='{{inputHint}}' 
-  bindconfirm='{{confirmTap}}' 
-  style='padding-left:12rpx;' 
-  bindinput='inputListener' 
-  bindconfirm='inputConfirm' 
-  value='{{inputValue}}' 
-  type='{{inputType}}' 
-  password='{{isPassword}}' 
-  confirm-type='{{confirmType}}'>
+  <input class="input" placeholder='{{inputHint}}' bindconfirm='{{confirmTap}}' style='padding-left:12rpx;' bindinput='inputListener' bindconfirm='inputConfirm' value='{{inputValue}}' type='{{inputType}}' password='{{isPassword}}' confirm-type='{{confirmType}}'>
   </input>
   <icon size="16px" bindtap='clearTap' class="{{isClearShow?'clearImgShow':'clearImgHide'}}" type="clear"></icon>
 </view>
+  <!--  搜索结果 -->
+  <scroll-view class='resultview' scroll-y wx:if="{{resultList.length!=0}}">
+    <block wx:for="{{resultList}}">
+      <view bindtap="bindNavigate" data-key="{{item.name}}" class="resultitem">
+       <icon class='icon-class' size="12px" type="search"></icon>
+      {{item.name}}
+      </view>
+    </block>
+  </scroll-view>

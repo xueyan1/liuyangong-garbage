@@ -1,8 +1,8 @@
 <!-- 搜索的结果 
 垃圾类型：1-可回收垃圾，2-有害垃圾，4-湿垃圾，8-干垃圾，16-大件垃圾-->
 <block wx:if="{{result.length!=0 && !isLoading}}">
-  <view class='result' wx:for="{{result}}" wx:key="index">
-    <view style="color:{{contentList[swiperCurrent].color}}">
+  <scroll-view style="height: 150px;  display: flex;justify-content: center;align-items: center;" scroll-y  >
+    <view bindtap="chooseType" data-type="{{item.type}}"  wx:for="{{result}}" class='result' wx:key="index" style="color:{{contentList[swiperCurrent].color}}">
       <text class='name'>{{item.name}}:</text>
       <text wx:if="{{item.type === 1}}"  >可回收垃圾</text>
       <text wx:if="{{item.type === 2}}" >有害垃圾</text>
@@ -10,15 +10,16 @@
       <text wx:if="{{item.type === 8}}" >干垃圾</text>
       <text wx:if="{{item.type === 16}}" >大件垃圾</text>
     </view>
-  </view>
+  </scroll-view>
 
   <swiper current="{{swiperCurrent}}" class='swiper'>
     <block wx:key="index" wx:for="{{contentList}}">
       <swiper-item  class="item">
-        <image mode='widthFix' src='{{item.image}}'></image>
-        <view class='title mt_40' style="color:{{item.color}}">{{item.title}}是指{{item.definition}}</view>
-        <view style="background-color:{{item.color}}" class='title include mt_20'>{{item.title}}主要包括</view>
-        <view class='title mt_20 demand' style="color:{{item.color}}" wx:for="{{item.demandList}}" wx:for-item="demandItem" wx:key="index">{{demandItem}}</view>
+        <image src='{{item.image}}'></image>
+        <view class='title mt_20' style="color:{{item.color}}">{{item.title}}是指{{item.definition}}</view>
+        <view class='title mt_20' style="color:{{item.color}}">主要包括:{{item.include}}</view>
+        <view style="background-color:{{item.color}}" class='title include mt_20'>{{item.title}}投放要求</view>
+        <view class='title mt_20 demand' style="color:{{item.color}}" wx:for="{{item.demandList}}" wx:for-item="demandItem" wx:key="index">{{index+1}}、 {{demandItem}}</view>
       </swiper-item>
     </block>
   </swiper>
