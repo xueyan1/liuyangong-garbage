@@ -16,9 +16,8 @@ Page({
     
   },
   chooseAR(){
-    wx.showToast({
-      icon:"none",
-      title: '努力开发中,敬请期待!',
+    wx.navigateTo({
+      url: '/pages/ar/ar',
     })
   },
   // 选择图片上传
@@ -29,11 +28,12 @@ Page({
       sourceType: ['album', 'camera'],
       success(res) {
         const tempFilePaths = res.tempFilePaths
+        console.log(tempFilePaths)
         wx.showLoading({
           title: '上传识别中'
         })
         wx.uploadFile({
-          url: queryByImgUrl, //仅为示例，非真实的接口地址
+          url: queryByImgUrl, 
           filePath: tempFilePaths[0],
           name: 'file',
           header: {

@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/record/record",
-    "pages/index/index",
+    "pages/ar/ar",
     "pages/detail/detail",
     "pages/photo/photo",
     "pages/mine/mine"

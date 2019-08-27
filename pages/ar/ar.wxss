@@ -21,3 +21,10 @@
   width: 132rpx;
   height: 132rpx;
 }
+.canvas{
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+  width: 100rpx;
+  height: 100rpx
+}

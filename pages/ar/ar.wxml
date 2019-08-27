@@ -1,0 +1,20 @@
+<camera 
+wx:if="{{show}}" 
+device-position="back" 
+flash="off" 
+binderror="error" 
+style="width:100vw; height:100vh;">
+  <cover-view class='bottom-block'>
+    <cover-image 
+    class='takePhoto' 
+    src='../../image/ar.png' 
+    bindtap='takeAndPredict'>
+    </cover-image>
+  </cover-view>
+</camera>
+<canvas 
+wx:if="{{showCanvas}}"
+canvas-id="canvas" 
+class="canvas" 
+style="width:224px; height:224px;">
+</canvas>
