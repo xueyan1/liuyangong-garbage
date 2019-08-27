@@ -19,7 +19,7 @@ Page({
   drawImage(imagePath) {
     const cv = wx.createCanvasContext('canvas', this)
     const drawFunc = () => {
-      cv.drawImage(imagePath, 0, 0, this.data.photoWidth, this.data.photoWidth, 0, 0, 224, 224)
+      cv.drawImage(imagePath, 0, 0, this.data.photoWidth, this.data.photoWidth, 0, 0, 300, 300)
       cv.draw()
     }
     if (this.data.photoWidth == 0) {
@@ -77,7 +77,6 @@ Page({
             }
           }
         })
-  
       }
     })
   }
