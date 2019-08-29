@@ -4,12 +4,12 @@
   </input>
   <icon size="16px" bindtap='clearTap' class="{{isClearShow?'clearImgShow':'clearImgHide'}}" type="clear"></icon>
 </view>
-  <!--  搜索结果 -->
-  <scroll-view class='resultview' scroll-y wx:if="{{resultList.length!=0}}">
-    <block wx:for="{{resultList}}">
-      <view bindtap="bindNavigate" data-key="{{item.name}}" class="resultitem">
-       <icon class='icon-class' size="12px" type="search"></icon>
+<!--  搜索结果 -->
+<scroll-view class='resultview' scroll-y wx:if="{{resultList.length!=0}}">
+  <block wx:for="{{resultList}}">
+    <view bindtap="bindNavigate" data-key="{{item.name}}" class="resultitem">
+      <icon class='icon-class' size="12px" type="search"></icon>
       {{item.name}}
-      </view>
-    </block>
-  </scroll-view>
+    </view>
+  </block>
+</scroll-view>

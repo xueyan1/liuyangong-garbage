@@ -47,7 +47,7 @@ Page({
       key
     } = options
     if (key) {
-      let history =  wx.getStorageSync('history')
+      let hiconsstory =  wx.getStorageSync('history')
       if (!history){
         history = []
       }

@@ -1,11 +1,9 @@
 var plugin = requirePlugin("WechatSI")
 let manager = plugin.getRecordRecognitionManager()
 import {
-  getRefuseData
-} from '../../utils/request.js'
-import {
   queryGarbagUrl
 } from '../../utils/urls.js'
+import Http from '../../utils/request.js'
 Page({
 
   data: {
@@ -24,6 +22,8 @@ Page({
   },
   initRecord() {
     manager.onRecognize = (res) => {
+
+      console.log("onRecognize",res)
       let text = res.result
       this.setData({
         currentText: text,
@@ -81,15 +81,20 @@ Page({
     history.push(name)
     wx.setStorageSync("history", history)
 
-    wx.request({
-      url: `${queryGarbagUrl}?name=${name}`,
-      success(res) {
-        console.log("res", res)
-        if (!res.data && !res.data.data) return
-        const {
-          type
-        } = res.data.data
+    Http.get({
+      url: queryGarbagUrl,
+      params: {
+        name
+      }
+    }).then((res => {
+      console.log(res)
+      if (res.data) {
+        const index = res.data.findIndex((item) =>{
+            return item.name === name
+        })
+        console.log(index)
         let typeName = ''
+        let type = res.data[index].type
         wx.hideLoading()
         switch (type) {
           case 1:
@@ -111,13 +116,12 @@ Page({
         that.setData({
           typeName
         })
-      },
-      fail() {
+      }else{
         wx.showToast({
           title: '识别失败，请重试',
         })
       }
-    })
+    }))
   },
 
   textToSpeech() {
