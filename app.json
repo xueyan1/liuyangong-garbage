@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/test/test",
     "pages/record/record",
+    "pages/fanyi/fanyi",
     "pages/ar/ar",
     "pages/detail/detail",
     "pages/photo/photo",
@@ -32,13 +34,13 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "喂，你的垃圾",
+    "navigationBarTitleText": "鎏嫣宫守护的小工具",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "plugins": {
     "WechatSI": {
-      "version": "0.3.1",
+      "version": "0.3.3",
       "provider": "wx069ba97219f66d99"
     }
   }

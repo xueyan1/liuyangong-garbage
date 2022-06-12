@@ -1,0 +1,5 @@
+<web-view bindload="" src="https://www.baidu.com">
+	<cover-view   wx:if="{{showNav}}" class="share">
+		<button open-type="share"> 点击分享</button>
+	</cover-view>
+</web-view>

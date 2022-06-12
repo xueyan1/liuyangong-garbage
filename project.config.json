@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -89,6 +89,20 @@
 					"pathName": "pages/record/record",
 					"query": "key=虾",
 					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "pages/fanyi/fanyi",
+					"pathName": "pages/fanyi/fanyi",
+					"query": "key=键盘",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
+					"query": "key=虾",
+					"scene": null
 				}
 			]
 		}

@@ -19,3 +19,5 @@
 
 
 <button class="concatBtn"  open-type="contact" >联系我</button>
+
+<navigator class='gofanyi'  hover-class="none" url="/pages/fanyi/fanyi">语音转文字</navigator>

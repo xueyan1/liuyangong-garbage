@@ -1,26 +1,30 @@
 page {
   background: white;
 }
+
 .head {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: #f1f1f1;
-  padding:20rpx 40rpx;
+  padding: 20rpx 40rpx;
   box-sizing: border-box;
   font-size: 32rpx;
   color: #333;
   margin-bottom: 40rpx
 }
+
 .nickname {
   margin-left: 30rpx
 }
-.userinfo{
+
+.userinfo {
   height: 100rpx;
   width: 100rpx;
   border-radius: 50%;
   overflow: hidden;
 }
+
 .history-text {
   margin-left: 40rpx;
   font-size: 36rpx;
@@ -42,7 +46,7 @@ page {
   margin-right: 20rpx;
   margin-top: 20rpx;
   border-radius: 10rpx;
-  color:#666;
+  color: #666;
 }
 
 .nohistory {
@@ -52,11 +56,23 @@ page {
   text-align: center;
   color: #666;
 }
-.concatBtn{
-    color: white;
-    font-size: 32rpx;
-    position: fixed;
-    bottom: 60rpx;
-    right:30rpx;
-    background-color: green
-  }
+
+.concatBtn {
+  color: white;
+  font-size: 32rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 30rpx;
+  background-color: green
+}
+
+.gofanyi {
+  border-radius: 4rpx;
+  padding: 10rpx;
+  color: white;
+  font-size: 26rpx;
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+  background-color: green
+}

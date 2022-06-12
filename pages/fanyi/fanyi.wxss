@@ -1,0 +1,28 @@
+
+.btn-view {
+  padding: 0 30rpx;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 93%;
+  bottom: 60rpx;
+}
+.btn-view button {
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.textview {
+  padding: 30rpx 30rpx;
+  font-size: 24rpx;
+}
+picker {
+  font-size: 24rpx;
+}
+.allview {
+  margin-top: 20rpx;
+  border-top: 1rpx red  solid ;
+}

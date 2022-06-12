@@ -1,0 +1,14 @@
+<view class="btn-view">
+	<button disabled="{{isRecording}}" bindtap="streamRecord">{{isRecording?'录音中...':'开始录音'}}   <text wx:if="{{isRecording}}">{{time}}</text></button>
+
+	<button bindtap="endStreamRecord">暂停录音</button>
+	<button bindtap="clear">清除内容</button>
+
+	<picker mode="selector" bindchange="pickerchange" range="{{languages}}"> {{pickerIndex >-1 ?languages[pickerIndex]:'切换语言'}} </picker>
+</view>
+<view>
+	<text class="textview" selectable='{{true}}'>{{currentText}}</text>
+</view>
+<view class="allview">
+	<text class="textview" selectable='{{true}}'>所有录音:{{allText}}</text>
+</view>

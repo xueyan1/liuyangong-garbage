@@ -1,0 +1,10 @@
+.share {
+  position: fixed;
+  bottom: 60rpx;
+  left: 80rpx;
+  width: 100rpx;
+  height: 100rpx;
+  color: white;
+  background: yellow;
+  z-index: 99999;
+}
